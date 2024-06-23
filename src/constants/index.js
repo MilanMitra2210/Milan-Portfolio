@@ -20,9 +20,10 @@ import {
   bootstrap,
   java,
   mysql,
-  postgresql,
   express,
-  vscode
+  vscode,
+  mern,
+  reactRedux
 } from "../assets";
 
 export const navLinks = [
@@ -183,31 +184,22 @@ const projects = [
   {
     name: "E-Commerce",
     description:
-      "s a creative problem-solver, I love turning complex challenges into elegant solutions. Whether it's building captivating front-end interfaces or robust back-end systems, I'm driven to deliver excellence at every step. I embrace continuous learning, always exploring the latest technologies to create cutting-edge solutions.",
+      "Developed a user-friendly eCommerce platform featuring a comprehensive product catalog, efficient cart management, and secure user authentication to ensure a seamless shopping experience. Implemented real-time product updates and secure transactions to enhance functionality using REST API. Technologies utilized include ReactJS, Redux, NodeJS, ExpressJS, REST API, and MongoDB.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "node",
         color: "pink-text-gradient",
       },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Blogging website",
-    description:
-      "s a creative problem-solver, I love turning complex challenges into elegant solutions. Whether it's building captivating front-end interfaces or robust back-end systems, I'm driven to deliver excellence at every step. I embrace continuous learning, always exploring the latest technologies to create cutting-edge solutions.",
-    tags: [
       {
-        name: "react",
+        name: "express",
         color: "blue-text-gradient",
       },
       {
@@ -215,33 +207,78 @@ const projects = [
         color: "green-text-gradient",
       },
       {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+      
+    ],
+    image: carrent,
+    icon: mern,
+    source_code_link: "https://github.com/MilanMitra2210/Ecommerce_App",
+  },
+  {
+    name: "Blogging website",
+    description:
+      "Developed a full-fledged blogging platform leveraging the MERN stack (MongoDB, Express, React, Node.js). This project boasts a modern, responsive design and a feature-rich user experience. It implements a powerful, modern editor for crafting visually stunning content.  A robust notification system keeps users engaged, while the innovative nested commenting system fosters deeper reader interaction. This project not only showcases my proficiency in MERN stack development but also demonstrates my ability to create user-centric, interactive web applications.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "blue-text-gradient",
+      },
+      {
         name: "scss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    icon: mern,
+    source_code_link: "https://github.com/MilanMitra2210/React-Blog",
   },
   {
     name: "Expense Tracker",
     description:
-      "s a creative problem-solver, I love turning complex challenges into elegant solutions. Whether it's building captivating front-end interfaces or robust back-end systems, I'm driven to deliver excellence at every step. I embrace continuous learning, always exploring the latest technologies to create cutting-edge solutions..",
+      "Developed a comprehensive expense tracking website to empower users with efficient financial management. This web application features functionalities for expense tracking, categorization, budgeting, and insightful reporting. Users can seamlessly add, delete, and search for expenses based on various criteria like category, amount, or date. The responsive UI ensures a smooth experience across devices. To achieve this, I leveraged React for the user interface and Redux for efficient state management, along with Node.js for the server-side logic.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "node",
         color: "pink-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "blue-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    icon: reactRedux,
+    source_code_link: "https://github.com/MilanMitra2210/Expense-Tracker",
   },
 ];
 

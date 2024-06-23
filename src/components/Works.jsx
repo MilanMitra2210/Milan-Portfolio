@@ -7,6 +7,8 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({
   index,
@@ -15,44 +17,53 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  icon,
+  liveDemoLink='https://github.com/MilanMitra2210/Expense-Tracker'
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]'>
+    <VerticalTimelineElement
+      contentStyle={{
+        background: "#1d1836",
+        color: "#fff",
+      }}
+      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      iconStyle={{ background: '#1d1836', color: '#fff' }}
+      icon={
+        <div className='flex justify-center items-center w-full h-full'>
           <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
+            src={icon}
+            alt={name}
+            className='w-[100%] h-[100%] object-contain'
           />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+        </div>
+      }
+    >
+      <motion.div
+        variants={fadeIn}
+        className={`relative overflow-hidden rounded-lg shadow-md ${styles.projectCard}`}
+      >
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover rounded-t-lg"
+        />
+        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+          >
+            <img
+              src={github}
+              alt='source code'
+              className='w-1/2 h-1/2 object-contain'
+            />
           </div>
         </div>
+        <div className="p-4">
+          <h3 className="text-lg font-bold text-white">{name}</h3>
+          <p className="mt-2 text-gray-400 text-sm">{description}</p>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
-        </div>
-
-        <div className='mt-4 flex flex-wrap gap-2'>
+          <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -62,8 +73,9 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
-    </motion.div>
+        </div>
+      </motion.div>
+    </VerticalTimelineElement>
   );
 };
 
@@ -89,9 +101,11 @@ const Works = () => {
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        <VerticalTimeline>
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </VerticalTimeline>
       </div>
     </>
   );

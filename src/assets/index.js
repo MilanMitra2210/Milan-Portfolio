@@ -24,6 +24,8 @@ import mysql from "./tech/mysql.png";
 import postgresql from "./tech/postgresql.png";
 import express from "./tech/express.png";
 import vscode from "./tech/vscode.png";
+import mern from "./tech/mern.png";
+import reactRedux from "./tech/react-redux.png";
 
 import bhramaand from "./company/bhramaand.png";
 import i75way from "./company/75way.png";
@@ -63,5 +65,7 @@ export {
   mysql,
   postgresql,
   express,
-  vscode
+  vscode,
+  mern,
+  reactRedux
 };
