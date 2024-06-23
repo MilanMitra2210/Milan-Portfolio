@@ -1,0 +1,11 @@
+Model Information:
+* title:	ITACHI EDO
+* source:	https://sketchfab.com/3d-models/itachi-edo-d600b9238229426ab93c71de553e7d14
+* author:	Nhan Do (https://sketchfab.com/do.nhan.310592)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "ITACHI EDO" (https://sketchfab.com/3d-models/itachi-edo-d600b9238229426ab93c71de553e7d14) by Nhan Do (https://sketchfab.com/do.nhan.310592) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
