@@ -59,11 +59,15 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+      <motion.div
+        initial="hidden"
+        animate="show"
+        variants={textVariant(0.1)}
+      >
+        <p className={`${styles.sectionSubText}`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText}`}>
           Work Experience.
         </h2>
       </motion.div>

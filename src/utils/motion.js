@@ -1,4 +1,4 @@
-export const textVariant = (delay) => {
+export const textVariant = (delay = 0) => {
   return {
     hidden: {
       y: -50,
@@ -16,15 +16,13 @@ export const textVariant = (delay) => {
   };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+export const fadeIn = (direction = "up", type = "tween", delay = 0.1, duration = 1) => {
   return {
-    hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+    initial: {
+      y: direction === "up" ? 30 : -30,
       opacity: 0,
     },
-    show: {
-      x: 0,
+    animate: {
       y: 0,
       opacity: 1,
       transition: {
