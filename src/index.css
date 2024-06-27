@@ -206,3 +206,6 @@
 .vertical-timeline {
   max-width: 100% !important;
 }
+.vertical-timeline.vertical-timeline--two-columns{
+  width: 100%;
+}
